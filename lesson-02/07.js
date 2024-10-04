@@ -7,10 +7,8 @@ let passportMarried = {
     }
 };
 
-let newPassportMarried = JSON.parse(JSON.stringify(passportMarried));
+let newPassportMarried = structuredClone(passportMarried);
 
-
-passportMarried.married = false;
 newPassportMarried.married = true;
 
 console.log(passportMarried);
